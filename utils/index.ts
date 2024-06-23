@@ -4,7 +4,7 @@ export async function fetchCars() {
     "Content-Type": "application/json",
   };
 
-  const resp = await fetch("https://api.api-ninjas.com/v1/cars?model=corolla", {
+  const resp = await fetch("https://api.api-ninjas.com/v1/cars?model=carrera", {
     method: "GET",
     headers: headers,
   });

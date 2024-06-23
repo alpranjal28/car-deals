@@ -3,8 +3,10 @@ import { MouseEventHandler } from "react";
 export interface CustomButtonProps {
   title: string;
   containerStyles?: string;
+  textStyles?: string;
   handleClick?: MouseEventHandler<HTMLButtonElement>;
   btnType?: "button" | "submit";
+  rightIcon?: string;
 }
 
 export interface SearchManufacturerProps {
@@ -12,7 +14,7 @@ export interface SearchManufacturerProps {
   setManufacturer: (manufacturer: string) => void;
 }
 
-export interface CarCardProps {
+export interface CarProps {
   vehicle: {
     city_mpg: number;
     class: string;

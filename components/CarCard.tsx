@@ -38,7 +38,7 @@ const CarCard = ({ vehicle }: CarProps) => {
 
       <div className="relative w-full h-40 my-3 object-contain">
         <Image
-          src={generateCarImageUrl({vehicle})}
+          src={generateCarImageUrl({ vehicle })}
           alt="carIMG"
           // width={50}
           // height={50}
@@ -66,7 +66,16 @@ const CarCard = ({ vehicle }: CarProps) => {
             <p className="text-[14px]">{drive.toUpperCase()}</p>
           </div>
           <div className="flex flex-col justify-center items-center gap-2">
-            <Image src={"/gas.svg"} width={20} height={20} alt="mileage" />
+            <Image
+              src={"/gas.svg"}
+              width={20}
+              height={20}
+              alt="mileage"
+              style={{
+                width: "20px",
+                height: "20px",
+              }}
+            />
             <p className="text-[14px]">{city_mpg} MPG</p>
           </div>
         </div>

@@ -16,6 +16,7 @@ export async function fetchCars(filters: FilterProps) {
   );
 
   const data = await resp.json();
+  // console.log(data);
 
   return data;
 }
@@ -47,7 +48,17 @@ export const generateCarImageUrl = (cars: CarProps, angle?: string) => {
   url.searchParams.append("zoomType", "fullscreen");
   url.searchParams.append("modelYear", `${year}`);
   url.searchParams.append("angle", `${angle}`);
-  console.log(url);
+  // console.log(url);
 
   return `${url}`;
+};
+
+export const updateSearchParams = (type: string, value: string) => {
+  const searchParams = new URLSearchParams(window.location.search);
+
+  searchParams.set(type, value);
+
+  const newPathname = `${window.location.pathname}?${searchParams.toString()}`;
+
+  return newPathname;
 };

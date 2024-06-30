@@ -35,6 +35,8 @@ export default function Hero() {
             alt="hero"
             fill
             className=" object-contain"
+            priority
+            quality={100}
           />
         </div>
         <div className="hero__image-overlay"></div>
